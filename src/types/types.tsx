@@ -15,7 +15,7 @@ export type Test1Props = {
 }
 
 export type TestResultProps = {
-  score: boolean
+  score: number
   setScoreTest1?: (score: number) => void
 }
 

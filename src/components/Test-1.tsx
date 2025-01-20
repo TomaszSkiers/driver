@@ -12,9 +12,7 @@ import { getAdvices } from "../api/api"
 import { useParams } from "react-router-dom"
 import { Advice, Test1Props } from "../types/types"
 
-
-
-export const Test1: React.FC<Test1Props> = ({setScoreTest1}) => {
+export const Test1: React.FC<Test1Props> = ({ setScoreTest1 }) => {
   const {
     data: advices,
     isLoading,
@@ -49,10 +47,13 @@ export const Test1: React.FC<Test1Props> = ({setScoreTest1}) => {
     // console.log(event.target.value)
   }
 
+  //* debugger
+  console.log('jestem w Test1' ,selectedValue)
+
   const handleButtonClick = () => {
-    if (selectedValue === '') {
-        alert('zaznacz jedną z opcji')
-        return
+    if (selectedValue === "") {
+      setScoreTest1(4)
+      return
     }
     let pom = false
     advice.test.forEach((item, index) => {
@@ -73,7 +74,8 @@ export const Test1: React.FC<Test1Props> = ({setScoreTest1}) => {
         // border: "1px solid red",
         display: "flex",
         flexDirection: "column",
-        p: 2
+        p: 2,
+        minHeight: 400
       }}
     >
       <Typography variant="h4" gutterBottom>
