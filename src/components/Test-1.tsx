@@ -11,6 +11,15 @@ import { useState } from "react"
 import { getAdvices } from "../api/api"
 import { useParams } from "react-router-dom"
 import { Advice, Test1Props } from "../types/types"
+import { styled } from "@mui/material/styles";
+
+const CustomLabel = styled("div")(({ theme }) => ({
+  textAlign: "left",
+  marginBottom: "10px",
+  fontSize: "1.2rem",
+  marginLeft: "20px",
+  color: theme.palette.text.primary // Użycie koloru z motywu
+}))
 
 export const Test1: React.FC<Test1Props> = ({ setScoreTest1 }) => {
   const {
@@ -48,7 +57,7 @@ export const Test1: React.FC<Test1Props> = ({ setScoreTest1 }) => {
   }
 
   //* debugger
-  console.log('jestem w Test1' ,selectedValue)
+  // console.log('jestem w Test1' ,selectedValue)
 
   const handleButtonClick = () => {
     if (selectedValue === "") {
@@ -75,10 +84,11 @@ export const Test1: React.FC<Test1Props> = ({ setScoreTest1 }) => {
         display: "flex",
         flexDirection: "column",
         p: 2,
-        minHeight: 400
+        minHeight: 400,
+        backgroundColor: "background.default"
       }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" color="text.primary" gutterBottom>
         {advice.questions[0]}
       </Typography>
       <RadioGroup
@@ -93,20 +103,13 @@ export const Test1: React.FC<Test1Props> = ({ setScoreTest1 }) => {
             value={`option${index + 1}`}
             control={<Radio />}
             label={
-              <div
-                style={{
-                  textAlign: "left",
-                  marginBottom: "10px",
-                  fontSize: "1.2rem",
-                  marginLeft: "20px"
-                }}
-              >
+              <CustomLabel>
                 <span>
                   <strong>{index + 1}.</strong>
                 </span>
                 <br />
                 <span>{answer}</span>
-              </div>
+              </CustomLabel>
             }
           />
         ))}

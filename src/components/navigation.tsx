@@ -1,26 +1,21 @@
 import { Button, Box } from "@mui/material"
-import { useState } from "react"
+// import { useState } from "react"
 import { Link } from "react-router-dom"
 
 export const Navigation = () => {
-  const [activeButton, setActiveButton] = useState<string>("/")
-  const handleButtonClick = (path: string) => {
-    setActiveButton(path)
-  }
+  // const [activeButton, setActiveButton] = useState<string>("/")
+  // const handleButtonClick = (path: string) => {
+  //   setActiveButton(path)
+  // }
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex",backgroundColor: "background.default", gap: 2, m: 2 }}>
       <Button
         component={Link}
         to="/"
-        color="inherit"
         fullWidth
-        onClick={() => handleButtonClick("/")}
-        sx={{
-          backgroundColor:
-            activeButton === "/" ? "primary.light" : "transparent",
-          "&:hover": { backgroundColor: "primary.main", color: "white" },
-          borderRadius: 0,
-        }}
+        // onClick={() => handleButtonClick("/")}
+        color="warning"
+        variant="outlined"
         disableRipple={true}
       >
         porady
@@ -28,15 +23,11 @@ export const Navigation = () => {
       <Button
         component={Link}
         to="/forum"
-        color="inherit"
+        color="warning"
+        variant="outlined"
         fullWidth
-        onClick={() => handleButtonClick("forum")}
-        sx={{
-          backgroundColor:
-            activeButton === "forum" ? "primary.light" : "transparent",
-          "&:hover": { backgroundColor: "primary.main", color: "white" },
-          borderRadius: 0,
-        }}
+        // onClick={() => handleButtonClick("forum")}
+        
         disableRipple={true}
       >
         Forum
@@ -44,15 +35,10 @@ export const Navigation = () => {
       <Button
         component={Link}
         to="/search"
-        color="inherit"
         fullWidth
-        onClick={() => handleButtonClick("search")}
-        sx={{
-          backgroundColor:
-            activeButton === "search" ? "primary.light" : "transparent",
-          "&:hover": { backgroundColor: "primary.main", color: "white" },
-          borderRadius: 0,
-        }}
+        // onClick={() => handleButtonClick("search")}
+        color="warning"
+        variant="outlined"
         disableRipple={true}
       >
         wyszukaj

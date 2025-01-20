@@ -2,6 +2,7 @@
     "advices": [
         {
             "id": 1,
+            "subject": "bezpieczeństwo",
             "title": "Bezpieczne hamowanie silnikiem",
             "content": "Hamowanie silnikiem to technika, która pozwala zmniejszyć prędkość pojazdu bez nadmiernego zużycia hamulców. Polega na redukcji biegów w odpowiednim momencie, co zwiększa opór silnika i spowalnia pojazd. Jest to szczególnie przydatne podczas jazdy w górach lub na śliskiej nawierzchni.",
             "src": "article1.jpg",
@@ -15,6 +16,7 @@
         },
         {
             "id": 2,
+            "subject": "technika",
             "title": "Znaczenie regularnej wymiany oleju silnikowego",
             "content": "Olej silnikowy pełni kluczową rolę w pracy silnika, zmniejszając tarcie między jego elementami. Regularna wymiana oleju pozwala uniknąć awarii oraz wydłuża żywotność jednostki napędowej. Zaleca się wymianę oleju co 10-15 tysięcy kilometrów lub raz w roku, w zależności od stylu jazdy.",
             "src": "article2.jpg",
@@ -28,6 +30,7 @@
         },
         {
             "id": 3,
+            "subject": "bezpieczeństwo",
             "title": "Jak dbać o opony w samochodzie?",
             "content": "Odpowiednia pielęgnacja opon zwiększa bezpieczeństwo i komfort jazdy. Należy regularnie sprawdzać ciśnienie, rotować opony między osiami co 10 tysięcy kilometrów i kontrolować głębokość bieżnika. Unikanie gwałtownego hamowania i przyspieszania również przedłuża ich żywotność.",
             "src": "article3.jpg",
@@ -42,6 +45,7 @@
         },
         {
             "id": 4,
+            "subject": "korki",
             "title": "Rola płynu chłodniczego w aucie",
             "content": "Płyn chłodniczy odpowiada za utrzymanie optymalnej temperatury pracy silnika. Zapobiega przegrzewaniu oraz zamarzaniu jednostki napędowej. Należy kontrolować jego poziom co najmniej raz na trzy miesiące oraz uzupełniać w razie potrzeby odpowiednim płynem zalecanym przez producenta.",
             "src": "article4.jpg",
@@ -55,6 +59,7 @@
         },
         {
             "id": 5,
+            "subject": "bezpieczeństwo",
             "title": "Znaczenie odpowiedniej techniki jazdy na zakrętach",
             "content": "Jazda na zakrętach wymaga zachowania odpowiedniej prędkości i płynności ruchów kierownicą. Unikanie gwałtownego hamowania oraz właściwe przygotowanie pojazdu, takie jak kontrola opon i zawieszenia, zwiększają bezpieczeństwo. Pamiętaj, aby zawsze dostosować prędkość do warunków na drodze.",
             "src": "article5.jpg",
@@ -68,6 +73,7 @@
         },
         {
             "id": 6,
+            "subject": "korki",
             "title": "Dlaczego warto stosować paliwo wysokiej jakości?",
             "content": "Paliwo wysokiej jakości wpływa na lepszą pracę silnika oraz zmniejszenie emisji spalin. Zawiera dodatki oczyszczające, które zapobiegają osadzaniu się zanieczyszczeń w układzie paliwowym. Wybór odpowiedniego paliwa może również poprawić osiągi pojazdu oraz wydłużyć żywotność silnika.",
             "src": "article6.jpg",

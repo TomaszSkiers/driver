@@ -7,7 +7,8 @@ export const TestResult: React.FC<TestResultProps> = ({
   setScoreTest1
 }) => {
 
-console.log('jestem w TestResoult', score)
+//*debugger
+// console.log('jestem w TestResoult', score)
 
   const showProperInfo = () => {
     if (score === 1) {
@@ -45,7 +46,7 @@ console.log('jestem w TestResoult', score)
   }
 
   return (
-    <Box sx={{ minHeight: 400 }}>
+    <Box color="text.primary" sx={{ minHeight: 400, backgroundColor: "background.default" }}>
       <Typography variant="h4" sx={{ p: 5 }}>
         {score === 1 ? "odpowiedz prawidłowa" : score === 3 ? 'nie zaznaczono pytania' : 'odpowiedz błędna'}
       </Typography>

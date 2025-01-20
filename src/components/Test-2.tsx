@@ -10,6 +10,15 @@ import {
 } from "@mui/material"
 
 import { useState } from "react"
+import { styled } from "@mui/material/styles";
+
+const CustomLabel = styled("div")(({ theme }) => ({
+  textAlign: "left",
+  marginBottom: "10px",
+  fontSize: "1.2rem",
+  marginLeft: "20px",
+  color: theme.palette.text.primary // Użycie koloru z motywu
+}))
 
 export const Test2 = () => {
   const [selectedValue, setSelectedValue] = useState<string>("")
@@ -19,11 +28,12 @@ export const Test2 = () => {
   }
 
   return (
-    <FormControl
+    <FormControl 
       component="fieldset"
-      sx={{  display: "flex", flexDirection: "column", mb: 5 }}
+      
+      sx={{  display: "flex", flexDirection: "column", backgroundColor: "background.default" }}
     >
-      <Typography variant="h4" sx={{p: 2}}>Pytanie do testu</Typography>
+      <Typography color="text.primary" variant="h4" sx={{p: 2}}>Pytanie do testu</Typography>
 
       <RadioGroup
         name="grupa2"
@@ -41,7 +51,7 @@ export const Test2 = () => {
               value="option1"
               control={<Radio sx={{ alignSelf: "flex-start" }} />}
               label={
-                <div>
+                <CustomLabel>
                   <strong style={{textAlign: 'left', display: 'block'}}>1.</strong>
                   <br />
                   <div style={{textAlign: 'left'}}>
@@ -50,7 +60,7 @@ export const Test2 = () => {
                     adipisci doloribus maxime, sunt, labore perferendis quo
                     vitae asperiores veritatis distinctio! Voluptatem, odio?
                   </div>
-                </div>
+                </CustomLabel>
               }
             />
           </Grid>
@@ -63,7 +73,7 @@ export const Test2 = () => {
               value="option2"
               control={<Radio sx={{ alignSelf: "flex-start" }} />}
               label={
-                <div>
+                <CustomLabel>
                   <strong style={{textAlign: 'left', display: 'block'}}>1.</strong>
                   <br />
                   <div style={{textAlign: 'left'}}>
@@ -72,7 +82,7 @@ export const Test2 = () => {
                     adipisci doloribus maxime, sunt, labore perferendis quo
                     vitae asperiores veritatis distinctio! Voluptatem, odio?
                   </div>
-                </div>
+                </CustomLabel>
               }
             />
           </Grid>
@@ -85,7 +95,7 @@ export const Test2 = () => {
               value="option3"
               control={<Radio sx={{ alignSelf: "flex-start" }} />}
               label={
-                <div>
+                <CustomLabel>
                   <strong style={{textAlign: 'left', display: 'block'}}>1.</strong>
                   <br />
                   <div style={{textAlign: 'left'}}>
@@ -94,7 +104,7 @@ export const Test2 = () => {
                     adipisci doloribus maxime, sunt, labore perferendis quo
                     vitae asperiores veritatis distinctio! Voluptatem, odio?
                   </div>
-                </div>
+                </CustomLabel>
               }
             />
           </Grid>
@@ -104,7 +114,7 @@ export const Test2 = () => {
         variant="outlined"
         color="warning"
         
-        sx={{ p: "10px 40px 10px 40px", mt: 2, alignSelf: "center" }}
+        sx={{ p: "10px 40px 10px 40px", mt: 2, mb:8, alignSelf: "center" }}
       >
         sprawdź
       </Button>
