@@ -8,7 +8,14 @@ export const Navigation = () => {
   //   setActiveButton(path)
   // }
   return (
-    <Box sx={{ display: "flex",backgroundColor: "background.default", gap: 2, m: 2 }}>
+    <Box
+      sx={{
+        display: "flex",
+        backgroundColor: "background.default",
+        gap: 2,
+        p: 2
+      }}
+    >
       <Button
         component={Link}
         to="/"
@@ -27,7 +34,7 @@ export const Navigation = () => {
         variant="outlined"
         fullWidth
         // onClick={() => handleButtonClick("forum")}
-        
+
         disableRipple={true}
       >
         Forum

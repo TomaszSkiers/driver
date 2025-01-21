@@ -3,6 +3,7 @@
 export interface Advice {
   id: number
   title: string
+  subject: string
   content: string
   src: string
   questions: string[]
@@ -19,6 +20,13 @@ export type TestResultProps = {
   setScoreTest1?: (score: number) => void
 }
 
+export type  ParamsSearchByCategory = {
+  data: Advice[]
+  isLoading: boolean
+  isError: boolean
+}
+
+export type SetParamsFunction = (params: ParamsSearchByCategory) => void
 
 
 //* przykłady typowania:
@@ -28,3 +36,7 @@ export type TestResultProps = {
 // }
 
 // const [selectedValue, setSelectedValue] = useState<string>("")
+
+// const handleChange = (event: SelectChangeEvent) => {
+//   setSubject(event.target.value as string)
+// }
