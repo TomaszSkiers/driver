@@ -15,9 +15,8 @@ export const Test = () => {
       return <Test1 setScoreTest1={setScoreTest1} /> //wyświetl testy
     else if (scoreTest1 === 2) return <TestResult score={1} /> //test zaliczony
     else if (scoreTest1 === 3)
-      return (
-        <TestResult score={2} setScoreTest1={setScoreTest1} />
-      ) //test niezaliczony
+      return <TestResult score={2} setScoreTest1={setScoreTest1} />
+    //test niezaliczony
     else if (scoreTest1 === 4)
       return <TestResult score={3} setScoreTest1={setScoreTest1} /> //nie wybrano odpowiedzi
   }

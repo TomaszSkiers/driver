@@ -1,7 +1,6 @@
-
 import { styled } from "@mui/material/styles"
 import { Box, Typography } from "@mui/material"
-import { Advice } from "../components/advice"
+import { Advice } from "../components/Advice"
 import { SearchByCategory } from "../components/SearchByCategory"
 import { useEffect, useState } from "react"
 import { ParamsSearchByCategory } from "../types/types"
@@ -17,33 +16,26 @@ const CustomBox = styled("div")(({ theme }) => ({
   // border: '1px solid red'
 }))
 
-
 export function Search() {
+  const [params, setParams] = useState<ParamsSearchByCategory>({
+    data: [],
+    isLoading: false,
+    isError: false
+  })
 
-const [params, setParams] = useState<ParamsSearchByCategory>({
-  data: [],
-  isLoading: false,
-  isError: false,
-})
-
-//*debugger
-useEffect(()=> {
-  console.log(params.data)
-  console.log(params.isLoading)
-  console.log(params.isError)
-},[params.data, params.isLoading, params.isError])
-
-
-  
+  //*debugger
+  useEffect(() => {
+    console.log(params.data)
+    console.log(params.isLoading)
+    console.log(params.isError)
+  }, [params.data, params.isLoading, params.isError])
 
   return (
     <CustomBox>
-      <Box sx={{ display: "flex" , gap: 5}}>
-        
+      <Box sx={{ display: "flex", gap: 5 }}>
         <SearchByCategory setParams={setParams} />
 
-        <SearchByPhrase setParams={setParams}/>
-
+        <SearchByPhrase setParams={setParams} />
       </Box>
 
       {/* Sekcja wyników */}

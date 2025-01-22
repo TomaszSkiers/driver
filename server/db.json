@@ -12,7 +12,8 @@
                 "Czy hamowanie silnikiem zmniejsza zużycie paliwa?"
             ],
             "answers": ["Technika spowalniania pojazdu poprzez redukcję biegów.", "Technika zmniejszania zużycia opon poprzez zwiększenie ciśnienia.", "Technika parkowania na pochyłości."],
-            "test": [true, false, false]
+            "test": [true, false, false],
+            "tags": ["tag1", "tag2", "tag3"]
         },
         {
             "id": 2,
@@ -26,7 +27,8 @@
                 "Jak często powinno się wymieniać olej silnikowy?"
             ],
             "answers": ["Zapobiega nadmiernemu zużyciu silnika.", "Zmniejsza zużycie opon.", "Obniża temperaturę w kabinie pojazdu."],
-            "test": [false, true, false]
+            "test": [false, true, false],
+            "tags": ["cos2"]
         },
         {
             "id": 3,
@@ -40,8 +42,8 @@
                 "Co oznacza głębokość bieżnika?"
             ],
             "answers": ["Raz na miesiąc lub przed dłuższą podróżą.", "Co 50 tysięcy kilometrów.", "Gdy opona osiąga maksymalną temperaturę."] ,
-            "test": [true, false, false]
-            
+            "test": [true, false, false],
+            "tags": ["tag1", "tag2", "tag3"]
         },
         {
             "id": 4,
@@ -55,7 +57,8 @@
                 "Czy płyn chłodniczy można mieszać z wodą?"
             ],
             "answers": ["Silnik może się przegrzać.", "Silnik zacznie zużywać więcej paliwa.", "Pojazd zacznie emitować mniej spalin."] ,
-            "test": [true, false, false]
+            "test": [true, false, false],
+            "tags": ["tag1", "tag2", "tag3"]
         },
         {
             "id": 5,
@@ -69,7 +72,8 @@
                 "Czy prędkość na zakrętach ma znaczenie?"
             ],
             "answers": ["Zapewnia lepszą kontrolę nad pojazdem.", "Zmniejsza zużycie oleju silnikowego.", "Zwiększa moc silnika."] ,
-            "test": [true, false, false]
+            "test": [true, false, false],
+            "tags": ["tag1", "tag2", "tag3"]
         },
         {
             "id": 6,
@@ -83,7 +87,8 @@
                 "Jakie dodatki zawiera paliwo wysokiej jakości?"
             ],
             "answers": ["Poprawia osiągi i zmniejsza emisję spalin.", "Zmniejsza poziom hałasu w pojeździe.", "Podnosi temperaturę spalania."] ,
-            "test": [true, false, false]
+            "test": [true, false, false],
+            "tags": ["tag1", "tag2", "tag3"]
         }
     ]
 }

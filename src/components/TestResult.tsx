@@ -6,10 +6,6 @@ export const TestResult: React.FC<TestResultProps> = ({
   score,
   setScoreTest1
 }) => {
-
-//*debugger
-// console.log('jestem w TestResoult', score)
-
   const showProperInfo = () => {
     if (score === 1) {
       return (
@@ -46,15 +42,18 @@ export const TestResult: React.FC<TestResultProps> = ({
   }
 
   return (
-    <Box color="text.primary" sx={{ minHeight: 400, backgroundColor: "background.default" }}>
+    <Box
+      color="text.primary"
+      sx={{ minHeight: 400, backgroundColor: "background.default" }}
+    >
       <Typography variant="h4" sx={{ p: 5 }}>
-        {score === 1 ? "odpowiedz prawidłowa" : score === 3 ? 'nie zaznaczono pytania' : 'odpowiedz błędna'}
+        {score === 1
+          ? "odpowiedz prawidłowa"
+          : score === 3
+          ? "nie zaznaczono pytania"
+          : "odpowiedz błędna"}
       </Typography>
       {showProperInfo()}
-
     </Box>
   )
 }
-//score 1 test zaliczony
-//score 2 test niezaliczony
-//scoer 3 nie wybrano odpowiedzi

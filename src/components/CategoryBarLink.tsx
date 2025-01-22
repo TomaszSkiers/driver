@@ -1,27 +1,17 @@
 import { Box, Button, Typography } from "@mui/material"
 import { useNavigate, useParams } from "react-router-dom"
-import { getFilteredAdvices } from "../api/api"
-import { Advice as AdviceType } from "../types/types"
-import { useQuery } from "@tanstack/react-query"
+
 import {
   isLoading as loading,
   isError as myError
 } from "../sharedFunctions/functions"
-
+import { useCategoryBarLink } from "../hooks/hooks"
 
 export const CategoryBarLink = () => {
   const { category } = useParams()
-  const cat: string = category === "undefined" ? "" : category
+  const cat: string = category ?? "" 
 
-  const {
-    data: advices,
-    isLoading,
-    isError
-  } = useQuery<AdviceType[]>({
-    queryKey: ["fetchData", cat], // Uwzględniamy temat w kluczu
-    queryFn: () => getFilteredAdvices(cat),
-    enabled: !!cat // Zapytanie zostanie wykonane tylko, jeśli `subject` nie jest pusty
-  })
+  const { data: advices, isLoading, isError } = useCategoryBarLink(cat)
 
   const navigate = useNavigate()
 

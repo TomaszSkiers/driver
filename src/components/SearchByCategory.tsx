@@ -7,11 +7,13 @@ import {
   SelectChangeEvent,
   Typography
 } from "@mui/material"
-import { useQuery } from "@tanstack/react-query"
 import React, { useEffect } from "react"
-import { getFilteredAdvices } from "../api/api"
-import { Advice as AdviceType, ChildComponentProps } from "../types/types"
-import { isLoading as loading, isError as myError  } from "../sharedFunctions/functions"
+import { ChildComponentProps } from "../types/types"
+import {
+  isLoading as loading,
+  isError as myError
+} from "../sharedFunctions/functions"
+import { useCategoryBarLink } from "../hooks/hooks"
 
 export const SearchByCategory: React.FC<ChildComponentProps> = ({
   setParams
@@ -19,15 +21,7 @@ export const SearchByCategory: React.FC<ChildComponentProps> = ({
   const categories: string[] = ["bezpieczeństwo", "technika", "korki"] //w bazie zrobiłem subject???
   const [subject, setSubject] = React.useState("")
 
-  const {
-    data: advices,
-    isLoading,
-    isError
-  } = useQuery<AdviceType[]>({
-    queryKey: ["fetchData", subject], // Uwzględniamy temat w kluczu
-    queryFn: () => getFilteredAdvices(subject),
-    enabled: !!subject // Zapytanie zostanie wykonane tylko, jeśli `subject` nie jest pusty
-  })
+  const { data: advices, isLoading, isError } = useCategoryBarLink(subject)
 
   useEffect(() => {
     setParams((prev) => ({

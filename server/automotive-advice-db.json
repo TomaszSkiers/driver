@@ -1,0 +1,224 @@
+{
+  "advice": [
+    {
+      "id": 1,
+      "title": "Wymiana oleju silnikowego",
+      "subject": "Konserwacja",
+      "content": "Regularna wymiana oleju jest kluczowa dla żywotności silnika. Należy wymieniać olej co 15000 km lub raz w roku.",
+      "src": "/images/oil-change.jpg",
+      "question": "Jak często należy wymieniać olej w silniku?",
+      "answers": ["Co 15000 km", "Raz w roku", "Gdy olej ciemnieje", "Według wskazań komputera"],
+      "tags": ["olej", "silnik", "konserwacja", "wymiana"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 2,
+      "title": "Ciśnienie w oponach",
+      "subject": "Bezpieczeństwo",
+      "content": "Prawidłowe ciśnienie w oponach wpływa na bezpieczeństwo i zużycie paliwa. Sprawdzaj je co najmniej raz w miesiącu.",
+      "src": "/images/tire-pressure.jpg",
+      "question": "Kiedy należy sprawdzać ciśnienie w oponach?",
+      "answers": ["Raz w miesiącu", "Przed dłuższą trasą", "Gdy opony wyglądają na spuszczone", "Co tydzień"],
+      "tags": ["opony", "bezpieczeństwo", "ciśnienie", "konserwacja"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 3,
+      "title": "Wymiana klocków hamulcowych",
+      "subject": "Hamulce",
+      "content": "Klocki hamulcowe należy wymienić, gdy ich grubość spadnie poniżej 3mm lub gdy słychać piszczenie podczas hamowania.",
+      "src": "/images/brake-pads.jpg",
+      "question": "Po czym poznać, że klocki hamulcowe wymagają wymiany?",
+      "answers": ["Grubość poniżej 3mm", "Piszczący dźwięk", "Twarda praca pedału", "Kontrolka na desce"],
+      "tags": ["hamulce", "klocki", "bezpieczeństwo", "wymiana"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 4,
+      "title": "Rozrząd",
+      "subject": "Silnik",
+      "content": "Pasek rozrządu należy wymieniać zgodnie z zaleceniami producenta, zazwyczaj między 60000 a 120000 km.",
+      "src": "/images/timing-belt.jpg",
+      "question": "Co ile należy wymieniać pasek rozrządu?",
+      "answers": ["60-120 tys. km", "Według instrukcji", "Co 5 lat", "Gdy słychać stukanie"],
+      "tags": ["rozrząd", "silnik", "pasek", "wymiana"],
+      "test": [true, true, true, false]
+    },
+    {
+      "id": 5,
+      "title": "Akumulator",
+      "subject": "Elektryka",
+      "content": "Średnia żywotność akumulatora to 4-5 lat. Warto sprawdzać jego stan przed zimą.",
+      "src": "/images/battery.jpg",
+      "question": "Jaka jest przeciętna żywotność akumulatora?",
+      "answers": ["4-5 lat", "Do końca gwarancji", "7-8 lat", "2-3 lata"],
+      "tags": ["akumulator", "elektryka", "rozruch", "konserwacja"],
+      "test": [true, false, false, false]
+    },
+    {
+      "id": 6,
+      "title": "Płyn chłodniczy",
+      "subject": "Chłodzenie",
+      "content": "Płyn chłodniczy chroni silnik przed przegrzaniem i zamarznięciem. Należy sprawdzać jego poziom i wymienić co 2 lata.",
+      "src": "/images/coolant.jpg",
+      "question": "Co ile należy wymieniać płyn chłodniczy?",
+      "answers": ["Co 2 lata", "Gdy zmieni kolor", "Co 5 lat", "Co roku"],
+      "tags": ["chłodzenie", "płyny", "silnik", "konserwacja"],
+      "test": [true, false, false, false]
+    },
+    {
+      "id": 7,
+      "title": "Filtry powietrza",
+      "subject": "Filtry",
+      "content": "Filtr powietrza należy wymieniać co 30000 km lub wcześniej w przypadku jazdy w zapylonym środowisku.",
+      "src": "/images/air-filter.jpg",
+      "question": "Co ile należy wymieniać filtr powietrza?",
+      "answers": ["30000 km", "Gdy jest brudny", "15000 km", "Co roku"],
+      "tags": ["filtr", "powietrze", "silnik", "wymiana"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 8,
+      "title": "Klimatyzacja",
+      "subject": "Komfort",
+      "content": "Serwis klimatyzacji powinien być wykonywany co 2 lata. Obejmuje odgrzybianie i uzupełnienie czynnika.",
+      "src": "/images/ac.jpg",
+      "question": "Jak często serwisować klimatyzację?",
+      "answers": ["Co 2 lata", "Gdy słabo chłodzi", "Co roku", "Co 5 lat"],
+      "tags": ["klimatyzacja", "serwis", "komfort", "konserwacja"],
+      "test": [true, true, false, false]
+    },
+    {
+      "id": 9,
+      "title": "Zawieszenie",
+      "subject": "Podwozie",
+      "content": "Elementy zawieszenia należy kontrolować przy każdym przeglądzie. Stuki mogą świadczyć o zużyciu.",
+      "src": "/images/suspension.jpg",
+      "question": "Kiedy sprawdzać stan zawieszenia?",
+      "answers": ["Podczas przeglądu", "Gdy stuka", "Co 20000 km", "Co roku"],
+      "tags": ["zawieszenie", "podwozie", "bezpieczeństwo", "kontrola"],
+      "test": [true, true, true, true]
+    },
+    {
+      "id": 10,
+      "title": "Świece zapłonowe",
+      "subject": "Zapłon",
+      "content": "Świece zapłonowe wymagają wymiany co 60000-100000 km, zależnie od typu i producenta.",
+      "src": "/images/spark-plugs.jpg",
+      "question": "Co ile wymieniać świece zapłonowe?",
+      "answers": ["60-100 tys. km", "Gdy silnik źle pracuje", "Co 30000 km", "Co 2 lata"],
+      "tags": ["świece", "zapłon", "silnik", "wymiana"],
+      "test": [true, true, false, false]
+    },
+    {
+      "id": 11,
+      "title": "Sprzęgło",
+      "subject": "Skrzynia biegów",
+      "content": "Żywotność sprzęgła zależy od stylu jazdy. Ślizganie i szarpanie to oznaki zużycia.",
+      "src": "/images/clutch.jpg",
+      "question": "Jakie są objawy zużytego sprzęgła?",
+      "answers": ["Ślizganie", "Szarpanie", "Wysoki pedał", "Hałas"],
+      "tags": ["sprzęgło", "skrzynia", "naprawa", "eksploatacja"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 12,
+      "title": "Wycieraczki",
+      "subject": "Widoczność",
+      "content": "Wycieraczki należy wymieniać co roku lub gdy pozostawiają smugi na szybie.",
+      "src": "/images/wipers.jpg",
+      "question": "Kiedy wymienić wycieraczki?",
+      "answers": ["Co roku", "Gdy zostawiają smugi", "Przed zimą", "Gdy piskają"],
+      "tags": ["wycieraczki", "widoczność", "bezpieczeństwo", "wymiana"],
+      "test": [true, true, true, true]
+    },
+    {
+      "id": 13,
+      "title": "Płyn hamulcowy",
+      "subject": "Hamulce",
+      "content": "Płyn hamulcowy należy wymieniać co 2 lata ze względu na jego higroskopijne właściwości.",
+      "src": "/images/brake-fluid.jpg",
+      "question": "Co ile wymieniać płyn hamulcowy?",
+      "answers": ["Co 2 lata", "Gdy zmieni kolor", "Co 50000 km", "Co rok"],
+      "tags": ["hamulce", "płyny", "bezpieczeństwo", "wymiana"],
+      "test": [true, false, false, false]
+    },
+    {
+      "id": 14,
+      "title": "Geometria kół",
+      "subject": "Zawieszenie",
+      "content": "Geometrię kół należy sprawdzać po wymienie opon lub gdy samochód ściąga na jedną stronę.",
+      "src": "/images/wheel-alignment.jpg",
+      "question": "Kiedy sprawdzać geometrię kół?",
+      "answers": ["Po wymianie opon", "Gdy auto ściąga", "Co roku", "Po uderzeniu"],
+      "tags": ["geometria", "koła", "zawieszenie", "regulacja"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 15,
+      "title": "Pasek klinowy",
+      "subject": "Silnik",
+      "content": "Pasek klinowy napędza alternator i pompę wspomagania. Piszczenie może oznaczać zużycie.",
+      "src": "/images/serpentine-belt.jpg",
+      "question": "Co może oznaczać piszczący pasek klinowy?",
+      "answers": ["Zużycie", "Złe napięcie", "Uszkodzenie", "Brak oleju"],
+      "tags": ["pasek", "silnik", "napęd", "konserwacja"],
+      "test": [true, true, true, false]
+    },
+    {
+      "id": 16,
+      "title": "Filtr paliwa",
+      "subject": "Zasilanie",
+      "content": "Filtr paliwa chroni układ wtryskowy przed zanieczyszczeniami. Wymiana co 60000 km.",
+      "src": "/images/fuel-filter.jpg",
+      "question": "Co ile wymieniać filtr paliwa?",
+      "answers": ["60000 km", "Według instrukcji", "30000 km", "Co roku"],
+      "tags": ["filtr", "paliwo", "zasilanie", "wymiana"],
+      "test": [true, true, false, false]
+    },
+    {
+      "id": 17,
+      "title": "Żarówki",
+      "subject": "Oświetlenie",
+      "content": "Regularnie sprawdzaj działanie wszystkich świateł. Przepalone żarówki wymieniaj parami.",
+      "src": "/images/bulbs.jpg",
+      "question": "Jak wymieniać przepalone żarówki?",
+      "answers": ["Parami", "Pojedynczo", "Wszystkie naraz", "Według koloru"],
+      "tags": ["oświetlenie", "żarówki", "bezpieczeństwo", "elektryka"],
+      "test": [true, false, false, false]
+    },
+    {
+      "id": 18,
+      "title": "DPF",
+      "subject": "Emisja spalin",
+      "content": "Filtr cząstek stałych wymaga regularnej regeneracji. Unikaj krótkich tras w mieście.",
+      "src": "/images/dpf.jpg",
+      "question": "Jak dbać o filtr DPF?",
+      "answers": ["Długie trasy", "Regularna regeneracja", "Wysokie obroty", "Dodatki do paliwa"],
+      "tags": ["dpf", "diesel", "emisja", "regeneracja"],
+      "test": [true, true, true, true]
+    },
+    {
+      "id": 19,
+      "title": "Turbosprężarka",
+      "subject": "Doładowanie",
+      "content": "Turbosprężarka wymaga odpowiedniej eksploatacji. Nie gasić silnika zaraz po jeździe.",
+      "src": "/images/turbo.jpg",
+      "question": "Jak dbać o turbosprężarkę?",
+      "answers": ["Odczekać po jeździe", "Dobry olej", "Unikać wysokich obrotów", "Regularne przeglądy"],
+      "tags": ["turbo", "silnik", "doładowanie", "eksploatacja"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 20,
+      "title": "AdBlue",
+      "subject": "Emisja spalin",
+      "content": "AdBlue redukuje emisję tlenków azotu w silnikach Diesla. Uzupełniaj gdy poziom spadnie poniżej 10%.",
+      "src": "/images/adblue.jpg",
+      "question": "Kiedy uzupełniać AdBlue?",
+      "answers": ["Poniżej 10%", "Co tankowanie", "Co przegląd", "Gdy się skończy"],
+      "tags": ["adblue", "diesel", "emisja", "eksploatacja"],
+      "test": [true, false, false, false]
+    }
+  ]
+}
