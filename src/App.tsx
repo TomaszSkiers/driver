@@ -8,6 +8,7 @@ import { Search } from "./pages/Sarch"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { Test } from "./pages/test"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
+import { CategoryBarLink } from "./components/CategoryBarLink"
 
 const AppStructure = () => {
   return (
@@ -38,6 +39,7 @@ function App() {
               <Route path="/forum" element={<Forum />} />
               <Route path="/search" element={<Search />} />
               <Route path="/test/:id" element={<Test />} />
+              <Route path="/category-bar-link/:category" element={<CategoryBarLink />} />
             </Route>
           </Routes>
         </BrowserRouter>

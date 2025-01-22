@@ -10,11 +10,8 @@ import {
 import { useQuery } from "@tanstack/react-query"
 import React, { useEffect } from "react"
 import { getFilteredAdvices } from "../api/api"
-import { Advice as AdviceType, ParamsSearchByCategory } from "../types/types"
-
-type ChildComponentProps = {
-  setParams: React.Dispatch<React.SetStateAction<ParamsSearchByCategory>> // Funkcja aktualizująca stan
-}
+import { Advice as AdviceType, ChildComponentProps } from "../types/types"
+import { isLoading as loading, isError as myError  } from "../sharedFunctions/functions"
 
 export const SearchByCategory: React.FC<ChildComponentProps> = ({
   setParams
@@ -44,6 +41,9 @@ export const SearchByCategory: React.FC<ChildComponentProps> = ({
   const handleChange = (event: SelectChangeEvent) => {
     setSubject(event.target.value as string)
   }
+
+  if (isLoading) return loading()
+  if (isError) return myError()
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>

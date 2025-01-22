@@ -20,7 +20,7 @@ export type TestResultProps = {
   setScoreTest1?: (score: number) => void
 }
 
-export type  ParamsSearchByCategory = {
+export type ParamsSearchByCategory = {
   data: Advice[]
   isLoading: boolean
   isError: boolean
@@ -28,6 +28,10 @@ export type  ParamsSearchByCategory = {
 
 export type SetParamsFunction = (params: ParamsSearchByCategory) => void
 
+export type ChildComponentProps = {
+  // Funkcja aktualizująca stan
+  setParams: React.Dispatch<React.SetStateAction<ParamsSearchByCategory>> 
+}
 
 //* przykłady typowania:
 

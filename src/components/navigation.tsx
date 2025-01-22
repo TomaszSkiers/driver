@@ -27,7 +27,7 @@ export const Navigation = () => {
       >
         porady
       </Button>
-      <Button
+      {/* <Button
         component={Link}
         to="/forum"
         color="warning"
@@ -38,7 +38,7 @@ export const Navigation = () => {
         disableRipple={true}
       >
         Forum
-      </Button>
+      </Button> */}
       <Button
         component={Link}
         to="/search"

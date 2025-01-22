@@ -1,4 +1,4 @@
-import { Alert, Button, CircularProgress, Stack } from "@mui/material"
+import { Alert, Button, CircularProgress, Stack, Typography } from "@mui/material"
 
 export const isLoading = () => {
   return (
@@ -8,6 +8,7 @@ export const isLoading = () => {
       alignItems="center"
       sx={{ minHeight: "200px" }}
     >
+      <Typography variant="h5" color="text.primary" sx={{p: 2, }}>pobieram dane.... czekaj</Typography>
       <CircularProgress />
     </Stack>
   )
@@ -22,7 +23,7 @@ export const isError = () => {
       sx={{ minHeight: "200px" }}
     >
       <Alert severity="error">
-        Something went wrong while fetching advices.
+        Coś poszło nie tak z pobieraniem danych.
       </Alert>
       <Button variant="contained" onClick={() => window.location.reload()}>
         Try Again

@@ -12,3 +12,8 @@ export const getFilteredAdvices = async (category: string): Promise<AdviceType[]
   const {data} = await axios.get(`${apipi}advices?subject=${category}`)
   return data
 }
+
+export const getFilteredAdvcesByPhrase = async(phrase: string): Promise<AdviceType[]> => {
+  const {data} = await axios.get(`${apipi}advices?title_like=${phrase}`)
+  return data
+}
