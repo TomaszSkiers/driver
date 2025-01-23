@@ -6,8 +6,9 @@ export interface Advice {
   subject: string
   content: string
   src: string
-  questions: string[]
+  question: string
   answers: string[]
+  tags: string[]
   test: boolean[]
 }
 

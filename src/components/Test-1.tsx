@@ -61,7 +61,7 @@ export const Test1: React.FC<Test1Props> = ({ setScoreTest1 }) => {
       }}
     >
       <Typography variant="h4" color="text.primary" gutterBottom>
-        {advice.questions[0]}
+        {advice.question}
       </Typography>
       <RadioGroup
         name="grupa1"

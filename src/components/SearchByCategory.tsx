@@ -7,19 +7,28 @@ import {
   SelectChangeEvent,
   Typography
 } from "@mui/material"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { ChildComponentProps } from "../types/types"
 import {
   isLoading as loading,
   isError as myError
 } from "../sharedFunctions/functions"
 import { useCategoryBarLink } from "../hooks/hooks"
+import { getSubjects } from "../api/api"
+
+
 
 export const SearchByCategory: React.FC<ChildComponentProps> = ({
   setParams
 }) => {
-  const categories: string[] = ["bezpieczeństwo", "technika", "korki"] //w bazie zrobiłem subject???
-  const [subject, setSubject] = React.useState("")
+  const [subject, setSubject] = useState("")
+  const [categories, setCategories] = useState<string[]>([]) 
+
+
+  //* debugger
+  useEffect(()=> {
+    getSubjects(setCategories, 'subjects')
+  }, [])
 
   const { data: advices, isLoading, isError } = useCategoryBarLink(subject)
 
@@ -52,12 +61,27 @@ export const SearchByCategory: React.FC<ChildComponentProps> = ({
           value={subject}
           label="Subject"
           onChange={handleChange}
+          MenuProps={{
+            PaperProps: {
+              style: {
+                maxHeight: 200,
+              },
+            },
+          }}
+          sx={{
+            '& .MuiSelect-select': {
+              overflowY: 'auto'
+            }
+          }}
         >
-          {categories.map((category, index) => (
+          {categories?.length > 0 
+          ? 
+          categories.map((category, index) => (
             <MenuItem key={index} value={category}>
               {category}
             </MenuItem>
-          ))}
+          ))
+        : null}
         </Select>
       </FormControl>
     </Box>

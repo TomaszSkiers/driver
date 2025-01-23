@@ -1,32 +1,27 @@
-import React, { useEffect, useRef, useState } from "react"
-import { Link as RouterLink } from "react-router-dom"
-import Link from "@mui/material/Link"
-import { Box, IconButton, Typography } from "@mui/material"
+import React, { useRef } from "react"
+import { Box, Chip, IconButton } from "@mui/material"
 import { ArrowForward, ArrowBack } from "@mui/icons-material"
 
-// Typowanie kategorii jako tablica stringów
-const categories: string[] = [
-  "bezpieczeństwo",
-  "technika",
-  "korki",
-  "kultura",
-  "sport",
-  "rozrywka"
-]
 
-export const HorizontalLinksWithButtons: React.FC = () => {
+export const HorizontalLinksWithButtons: React.FC<{
+  setTag: React.Dispatch<React.SetStateAction<{tag: string; tagNb: number | null}>>,
+  tags: string[]
+  tagNb: number | null
+}> = ({ setTag, tags, tagNb }) => {
+
+
+  //funkcja ogarniająca handleclicka zapis do stanu w Home i zapamiętanie klikniętego taga
+  const handleClick = (category: string, tagNumber: number) => {
+    setTag((prev) => ({
+      ...prev,
+      tag: category,
+      tagNb: tagNumber,
+    }))
+  }
+
   // Typowanie referencji do kontenera
   const containerRef = useRef<HTMLDivElement>(null)
 
-  const [showButtons, setShowButtons] = useState(false)
-
-  // Funkcja sprawdzająca, czy przyciski są potrzebne
-  const checkButtonsVisibility = () => {
-    if (containerRef.current) {
-      const { scrollWidth, clientWidth } = containerRef.current
-      setShowButtons(scrollWidth > clientWidth) // Przyciski widoczne tylko, gdy zawartość wykracza poza kontener
-    }
-  }
 
   // Funkcja do przewijania w lewo
   const scrollLeft = (): void => {
@@ -42,28 +37,17 @@ export const HorizontalLinksWithButtons: React.FC = () => {
     }
   }
 
-  // Ustawienie widoczności przycisków przy montażu i zmianie rozmiaru okna
-  useEffect(() => {
-    checkButtonsVisibility()
-    window.addEventListener("resize", checkButtonsVisibility)
-    return () => {
-      window.removeEventListener("resize", checkButtonsVisibility)
-    }
-  }, [])
-
   return (
     <Box
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: !showButtons ? "center" : "space-between"
+        justifyContent: "center"
       }}
     >
-      {showButtons && (
-        <IconButton onClick={scrollLeft} sx={{ marginRight: 1 }}>
-          <ArrowBack />
-        </IconButton>
-      )}
+      <IconButton onClick={scrollLeft} sx={{ marginRight: 1 }}>
+        <ArrowBack />
+      </IconButton>
 
       <Box
         ref={containerRef}
@@ -74,30 +58,23 @@ export const HorizontalLinksWithButtons: React.FC = () => {
           //   width: "100%",
         }}
       >
-        {categories.map((category, index) => (
+        {tags.map((category, index) => (
           <React.Fragment key={category}>
-            <Link
-              component={RouterLink}
-              to={`/category-bar-link/${category}`}
-              underline="none"
-              sx={{ margin: "0 8px", color: "primary.main" }}
-            >
-              {category}
-            </Link>
-            {index < categories.length - 1 && (
-              <Typography color="primary.main">|</Typography>
-            )}
+            <Chip
+              variant="outlined"
+              label={category}
+              color= {index === tagNb ? 'secondary' : 'primary'} 
+              sx={{m: 1}}
+              onClick={()=> {handleClick(category, index)}}
+            />
           </React.Fragment>
         ))}
       </Box>
 
-      {showButtons && (
-        <IconButton onClick={scrollRight} sx={{ marginLeft: 1 }}>
-          <ArrowForward />
-        </IconButton>
-      )}
+      <IconButton onClick={scrollRight} sx={{ marginLeft: 1 }}>
+        <ArrowForward />
+      </IconButton>
     </Box>
   )
 }
-
 

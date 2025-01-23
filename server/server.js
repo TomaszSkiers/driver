@@ -23,6 +23,22 @@ server.use((req, res, next) => {
   }
 });
 
+// Endpoint do pobierania unikalnych wartości pola "subject"
+server.get("/subjects", (req, res) => {
+  const db = router.db.get("advices"); // Pobiera wszystkie dane z tabeli advices
+  const subjects = db.map((advice) => advice.subject); // Wyciąga pole subject
+  const uniqueSubjects = [...new Set(subjects)]; // Usuwa duplikaty
+  res.json(uniqueSubjects); // Zwraca listę unikalnych wartości
+});
+
+// Endpoint do pobierania tagów
+server.get("/tags", (req, res) => {
+  const db = router.db.get("advices");
+  const allTags = db.flatMap((advice) => advice.tags);
+  const uniqueTags = [...new Set(allTags)];
+  res.json(uniqueTags);
+});
+
 server.use(router);
 
 server.listen(3000, () => {

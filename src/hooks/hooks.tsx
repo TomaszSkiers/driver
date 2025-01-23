@@ -1,5 +1,10 @@
 import { useQuery } from "@tanstack/react-query"
-import { getAdvices, getFilteredAdvcesByPhrase, getFilteredAdvices } from "../api/api"
+import {
+  getAdvices,
+  getAdvicesByTags,
+  getFilteredAdvcesByPhrase,
+  getFilteredAdvices
+} from "../api/api"
 import { Advice } from "../types/types"
 
 export const useAdvices = () => {
@@ -18,8 +23,15 @@ export const useCategoryBarLink = (data: string) => {
 }
 
 export const useSearchByPhrase = (data: string) => {
-    return useQuery<Advice[]>({
-        queryKey: ["fetchData", data],
-        queryFn: () => getFilteredAdvcesByPhrase(data)
-      })
+  return useQuery<Advice[]>({
+    queryKey: ["fetchData", data],
+    queryFn: () => getFilteredAdvcesByPhrase(data)
+  })
+}
+
+export const useSearchByTag = (tag: string) => {
+  return useQuery<Advice[]>({
+    queryKey: ["advices", tag],
+    queryFn: () => getAdvicesByTags(tag)
+  })
 }

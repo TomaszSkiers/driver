@@ -5,19 +5,21 @@ import {
   isLoading as loading,
   isError as myError
 } from "../sharedFunctions/functions"
-import { useCategoryBarLink } from "../hooks/hooks"
+import {  useSearchByTag } from "../hooks/hooks"
 
 export const CategoryBarLink = () => {
+
   const { category } = useParams()
   const cat: string = category ?? "" 
 
-  const { data: advices, isLoading, isError } = useCategoryBarLink(cat)
+  const { data: advices, isLoading, isError } = useSearchByTag(cat)
 
   const navigate = useNavigate()
 
   const loadTest = (id: number) => {
     navigate(`/test/${id}`)
   }
+
 
   if (isLoading) return loading()
   if (isError) return myError()
