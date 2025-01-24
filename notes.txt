@@ -1,0 +1,16 @@
+jak zrobić tagi?
+
+muszę pobrać z bazy danych wszystkie artykóły które zawierają określony tag 
+wyświetlić artykóły 
+
+wyposażyć plik bazy danych w tagi
+
+może wykorzystać jakoś komponent Home? 
+
+Home jest zrypany bo pobiera wszystkie artykóły, a powinien mieć ograniczenie do np: 10
+
+czyli przerobić zapytanie żeby pobierał albo 10  rekordów po kolei albo 10 
+po tagach 
+
+czyli zastosować paginację 
+

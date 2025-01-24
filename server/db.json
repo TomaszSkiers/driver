@@ -1,83 +1,224 @@
 {
-    "advices": [
-        {
-            "id": 1,
-            "title": "Bezpieczne hamowanie silnikiem",
-            "content": "Hamowanie silnikiem to technika, która pozwala zmniejszyć prędkość pojazdu bez nadmiernego zużycia hamulców. Polega na redukcji biegów w odpowiednim momencie, co zwiększa opór silnika i spowalnia pojazd. Jest to szczególnie przydatne podczas jazdy w górach lub na śliskiej nawierzchni.",
-            "src": "article1.jpg",
-            "questions": [
-                "Czym jest hamowanie silnikiem?",
-                "Kiedy warto stosować hamowanie silnikiem?",
-                "Czy hamowanie silnikiem zmniejsza zużycie paliwa?"
-            ],
-            "answers": ["Technika spowalniania pojazdu poprzez redukcję biegów.", "Technika zmniejszania zużycia opon poprzez zwiększenie ciśnienia.", "Technika parkowania na pochyłości."],
-            "test": [true, false, false]
-        },
-        {
-            "id": 2,
-            "title": "Znaczenie regularnej wymiany oleju silnikowego",
-            "content": "Olej silnikowy pełni kluczową rolę w pracy silnika, zmniejszając tarcie między jego elementami. Regularna wymiana oleju pozwala uniknąć awarii oraz wydłuża żywotność jednostki napędowej. Zaleca się wymianę oleju co 10-15 tysięcy kilometrów lub raz w roku, w zależności od stylu jazdy.",
-            "src": "article2.jpg",
-            "questions": [
-                "Dlaczego warto wymieniać olej silnikowy?",
-                "Co się stanie, jeśli olej silnikowy będzie rzadko wymieniany?",
-                "Jak często powinno się wymieniać olej silnikowy?"
-            ],
-            "answers": ["Zapobiega nadmiernemu zużyciu silnika.", "Zmniejsza zużycie opon.", "Obniża temperaturę w kabinie pojazdu."],
-            "test": [false, true, false]
-        },
-        {
-            "id": 3,
-            "title": "Jak dbać o opony w samochodzie?",
-            "content": "Odpowiednia pielęgnacja opon zwiększa bezpieczeństwo i komfort jazdy. Należy regularnie sprawdzać ciśnienie, rotować opony między osiami co 10 tysięcy kilometrów i kontrolować głębokość bieżnika. Unikanie gwałtownego hamowania i przyspieszania również przedłuża ich żywotność.",
-            "src": "article3.jpg",
-            "questions": [
-                "Jak często należy sprawdzać ciśnienie w oponach?",
-                "Dlaczego warto rotować opony?",
-                "Co oznacza głębokość bieżnika?"
-            ],
-            "answers": ["Raz na miesiąc lub przed dłuższą podróżą.", "Co 50 tysięcy kilometrów.", "Gdy opona osiąga maksymalną temperaturę."] ,
-            "test": [true, false, false]
-            
-        },
-        {
-            "id": 4,
-            "title": "Rola płynu chłodniczego w aucie",
-            "content": "Płyn chłodniczy odpowiada za utrzymanie optymalnej temperatury pracy silnika. Zapobiega przegrzewaniu oraz zamarzaniu jednostki napędowej. Należy kontrolować jego poziom co najmniej raz na trzy miesiące oraz uzupełniać w razie potrzeby odpowiednim płynem zalecanym przez producenta.",
-            "src": "article4.jpg",
-            "questions": [
-                "Co się stanie, jeśli zabraknie płynu chłodniczego?",
-                "Jak często należy sprawdzać poziom płynu chłodniczego?",
-                "Czy płyn chłodniczy można mieszać z wodą?"
-            ],
-            "answers": ["Silnik może się przegrzać.", "Silnik zacznie zużywać więcej paliwa.", "Pojazd zacznie emitować mniej spalin."] ,
-            "test": [true, false, false]
-        },
-        {
-            "id": 5,
-            "title": "Znaczenie odpowiedniej techniki jazdy na zakrętach",
-            "content": "Jazda na zakrętach wymaga zachowania odpowiedniej prędkości i płynności ruchów kierownicą. Unikanie gwałtownego hamowania oraz właściwe przygotowanie pojazdu, takie jak kontrola opon i zawieszenia, zwiększają bezpieczeństwo. Pamiętaj, aby zawsze dostosować prędkość do warunków na drodze.",
-            "src": "article5.jpg",
-            "questions": [
-                "Dlaczego ważna jest płynność ruchów na zakrętach?",
-                "Jakie elementy pojazdu warto sprawdzić przed jazdą na zakrętach?",
-                "Czy prędkość na zakrętach ma znaczenie?"
-            ],
-            "answers": ["Zapewnia lepszą kontrolę nad pojazdem.", "Zmniejsza zużycie oleju silnikowego.", "Zwiększa moc silnika."] ,
-            "test": [true, false, false]
-        },
-        {
-            "id": 6,
-            "title": "Dlaczego warto stosować paliwo wysokiej jakości?",
-            "content": "Paliwo wysokiej jakości wpływa na lepszą pracę silnika oraz zmniejszenie emisji spalin. Zawiera dodatki oczyszczające, które zapobiegają osadzaniu się zanieczyszczeń w układzie paliwowym. Wybór odpowiedniego paliwa może również poprawić osiągi pojazdu oraz wydłużyć żywotność silnika.",
-            "src": "article6.jpg",
-            "questions": [
-                "Jak paliwo wysokiej jakości wpływa na silnik?",
-                "Czy stosowanie lepszego paliwa zmniejsza zużycie oleju?",
-                "Jakie dodatki zawiera paliwo wysokiej jakości?"
-            ],
-            "answers": ["Poprawia osiągi i zmniejsza emisję spalin.", "Zmniejsza poziom hałasu w pojeździe.", "Podnosi temperaturę spalania."] ,
-            "test": [true, false, false]
-        }
-    ]
+  "advices": [
+    {
+      "id": 1,
+      "title": "Wymiana oleju silnikowego",
+      "subject": "Konserwacja",
+      "content": "Regularna wymiana oleju jest kluczowa dla żywotności silnika. Należy wymieniać olej co 15000 km lub raz w roku.",
+      "src": "article1.jpg",
+      "question": "Jak często należy wymieniać olej w silniku?",
+      "answers": ["Co 15000 km", "Raz w roku", "Gdy olej ciemnieje", "Według wskazań komputera"],
+      "tags": ["olej", "silnik", "konserwacja", "wymiana"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 2,
+      "title": "Ciśnienie w oponach",
+      "subject": "Bezpieczeństwo",
+      "content": "Prawidłowe ciśnienie w oponach wpływa na bezpieczeństwo i zużycie paliwa. Sprawdzaj je co najmniej raz w miesiącu.",
+      "src": "article2.jpg",
+      "question": "Kiedy należy sprawdzać ciśnienie w oponach?",
+      "answers": ["Raz w miesiącu", "Przed dłuższą trasą", "Gdy opony wyglądają na spuszczone", "Co tydzień"],
+      "tags": ["opony", "bezpieczeństwo", "ciśnienie", "konserwacja"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 3,
+      "title": "Wymiana klocków hamulcowych",
+      "subject": "Hamulce",
+      "content": "Klocki hamulcowe należy wymienić, gdy ich grubość spadnie poniżej 3mm lub gdy słychać piszczenie podczas hamowania.",
+      "src": "article3.jpg",
+      "question": "Po czym poznać, że klocki hamulcowe wymagają wymiany?",
+      "answers": ["Grubość poniżej 3mm", "Piszczący dźwięk", "Twarda praca pedału", "Kontrolka na desce"],
+      "tags": ["hamulce", "klocki", "bezpieczeństwo", "wymiana"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 4,
+      "title": "Rozrząd",
+      "subject": "Silnik",
+      "content": "Pasek rozrządu należy wymieniać zgodnie z zaleceniami producenta, zazwyczaj między 60000 a 120000 km.",
+      "src": "article4.jpg",
+      "question": "Co ile należy wymieniać pasek rozrządu?",
+      "answers": ["60-120 tys. km", "Według instrukcji", "Co 5 lat", "Gdy słychać stukanie"],
+      "tags": ["rozrząd", "silnik", "pasek", "wymiana"],
+      "test": [true, true, true, false]
+    },
+    {
+      "id": 5,
+      "title": "Akumulator",
+      "subject": "Elektryka",
+      "content": "Średnia żywotność akumulatora to 4-5 lat. Warto sprawdzać jego stan przed zimą.",
+      "src": "article5.jpg",
+      "question": "Jaka jest przeciętna żywotność akumulatora?",
+      "answers": ["4-5 lat", "Do końca gwarancji", "7-8 lat", "2-3 lata"],
+      "tags": ["akumulator", "elektryka", "rozruch", "konserwacja"],
+      "test": [true, false, false, false]
+    },
+    {
+      "id": 6,
+      "title": "Płyn chłodniczy",
+      "subject": "Chłodzenie",
+      "content": "Płyn chłodniczy chroni silnik przed przegrzaniem i zamarznięciem. Należy sprawdzać jego poziom i wymienić co 2 lata.",
+      "src": "article6.jpg",
+      "question": "Co ile należy wymieniać płyn chłodniczy?",
+      "answers": ["Co 2 lata", "Gdy zmieni kolor", "Co 5 lat", "Co roku"],
+      "tags": ["chłodzenie", "płyny", "silnik", "konserwacja"],
+      "test": [true, false, false, false]
+    },
+    {
+      "id": 7,
+      "title": "Filtry powietrza",
+      "subject": "Filtry",
+      "content": "Filtr powietrza należy wymieniać co 30000 km lub wcześniej w przypadku jazdy w zapylonym środowisku.",
+      "src": "article1.jpg",
+      "question": "Co ile należy wymieniać filtr powietrza?",
+      "answers": ["30000 km", "Gdy jest brudny", "15000 km", "Co roku"],
+      "tags": ["filtr", "powietrze", "silnik", "wymiana"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 8,
+      "title": "Klimatyzacja",
+      "subject": "Komfort",
+      "content": "Serwis klimatyzacji powinien być wykonywany co 2 lata. Obejmuje odgrzybianie i uzupełnienie czynnika.",
+      "src": "article2.jpg",
+      "question": "Jak często serwisować klimatyzację?",
+      "answers": ["Co 2 lata", "Gdy słabo chłodzi", "Co roku", "Co 5 lat"],
+      "tags": ["klimatyzacja", "serwis", "komfort", "konserwacja"],
+      "test": [true, true, false, false]
+    },
+    {
+      "id": 9,
+      "title": "Zawieszenie",
+      "subject": "Podwozie",
+      "content": "Elementy zawieszenia należy kontrolować przy każdym przeglądzie. Stuki mogą świadczyć o zużyciu.",
+      "src": "article3.jpg",
+      "question": "Kiedy sprawdzać stan zawieszenia?",
+      "answers": ["Podczas przeglądu", "Gdy stuka", "Co 20000 km", "Co roku"],
+      "tags": ["zawieszenie", "podwozie", "bezpieczeństwo", "kontrola"],
+      "test": [true, true, true, true]
+    },
+    {
+      "id": 10,
+      "title": "Świece zapłonowe",
+      "subject": "Zapłon",
+      "content": "Świece zapłonowe wymagają wymiany co 60000-100000 km, zależnie od typu i producenta.",
+      "src": "article4.jpg",
+      "question": "Co ile wymieniać świece zapłonowe?",
+      "answers": ["60-100 tys. km", "Gdy silnik źle pracuje", "Co 30000 km", "Co 2 lata"],
+      "tags": ["świece", "zapłon", "silnik", "wymiana"],
+      "test": [true, true, false, false]
+    },
+    {
+      "id": 11,
+      "title": "Sprzęgło",
+      "subject": "Skrzynia biegów",
+      "content": "Żywotność sprzęgła zależy od stylu jazdy. Ślizganie i szarpanie to oznaki zużycia.",
+      "src": "article5.jpg",
+      "question": "Jakie są objawy zużytego sprzęgła?",
+      "answers": ["Ślizganie", "Szarpanie", "Wysoki pedał", "Hałas"],
+      "tags": ["sprzęgło", "skrzynia", "naprawa", "eksploatacja"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 12,
+      "title": "Wycieraczki",
+      "subject": "Widoczność",
+      "content": "Wycieraczki należy wymieniać co roku lub gdy pozostawiają smugi na szybie.",
+      "src": "article6.jpg",
+      "question": "Kiedy wymienić wycieraczki?",
+      "answers": ["Co roku", "Gdy zostawiają smugi", "Przed zimą", "Gdy piskają"],
+      "tags": ["wycieraczki", "widoczność", "bezpieczeństwo", "wymiana"],
+      "test": [true, true, true, true]
+    },
+    {
+      "id": 13,
+      "title": "Płyn hamulcowy",
+      "subject": "Hamulce",
+      "content": "Płyn hamulcowy należy wymieniać co 2 lata ze względu na jego higroskopijne właściwości.",
+      "src": "article1.jpg",
+      "question": "Co ile wymieniać płyn hamulcowy?",
+      "answers": ["Co 2 lata", "Gdy zmieni kolor", "Co 50000 km", "Co rok"],
+      "tags": ["hamulce", "płyny", "bezpieczeństwo", "wymiana"],
+      "test": [true, false, false, false]
+    },
+    {
+      "id": 14,
+      "title": "Geometria kół",
+      "subject": "Zawieszenie",
+      "content": "Geometrię kół należy sprawdzać po wymienie opon lub gdy samochód ściąga na jedną stronę.",
+      "src": "article1.jpg",
+      "question": "Kiedy sprawdzać geometrię kół?",
+      "answers": ["Po wymianie opon", "Gdy auto ściąga", "Co roku", "Po uderzeniu"],
+      "tags": ["geometria", "koła", "zawieszenie", "regulacja"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 15,
+      "title": "Pasek klinowy",
+      "subject": "Silnik",
+      "content": "Pasek klinowy napędza alternator i pompę wspomagania. Piszczenie może oznaczać zużycie.",
+      "src": "article1.jpg",
+      "question": "Co może oznaczać piszczący pasek klinowy?",
+      "answers": ["Zużycie", "Złe napięcie", "Uszkodzenie", "Brak oleju"],
+      "tags": ["pasek", "silnik", "napęd", "konserwacja"],
+      "test": [true, true, true, false]
+    },
+    {
+      "id": 16,
+      "title": "Filtr paliwa",
+      "subject": "Zasilanie",
+      "content": "Filtr paliwa chroni układ wtryskowy przed zanieczyszczeniami. Wymiana co 60000 km.",
+      "src": "article1.jpg",
+      "question": "Co ile wymieniać filtr paliwa?",
+      "answers": ["60000 km", "Według instrukcji", "30000 km", "Co roku"],
+      "tags": ["filtr", "paliwo", "zasilanie", "wymiana"],
+      "test": [true, true, false, false]
+    },
+    {
+      "id": 17,
+      "title": "Żarówki",
+      "subject": "Oświetlenie",
+      "content": "Regularnie sprawdzaj działanie wszystkich świateł. Przepalone żarówki wymieniaj parami.",
+      "src": "article1.jpg",
+      "question": "Jak wymieniać przepalone żarówki?",
+      "answers": ["Parami", "Pojedynczo", "Wszystkie naraz", "Według koloru"],
+      "tags": ["oświetlenie", "żarówki", "bezpieczeństwo", "elektryka"],
+      "test": [true, false, false, false]
+    },
+    {
+      "id": 18,
+      "title": "DPF",
+      "subject": "Emisja spalin",
+      "content": "Filtr cząstek stałych wymaga regularnej regeneracji. Unikaj krótkich tras w mieście.",
+      "src": "article1.jpg",
+      "question": "Jak dbać o filtr DPF?",
+      "answers": ["Długie trasy", "Regularna regeneracja", "Wysokie obroty", "Dodatki do paliwa"],
+      "tags": ["dpf", "diesel", "emisja", "regeneracja"],
+      "test": [true, true, true, true]
+    },
+    {
+      "id": 19,
+      "title": "Turbosprężarka",
+      "subject": "Doładowanie",
+      "content": "Turbosprężarka wymaga odpowiedniej eksploatacji. Nie gasić silnika zaraz po jeździe.",
+      "src": "article1.jpg",
+      "question": "Jak dbać o turbosprężarkę?",
+      "answers": ["Odczekać po jeździe", "Dobry olej", "Unikać wysokich obrotów", "Regularne przeglądy"],
+      "tags": ["turbo", "silnik", "doładowanie", "eksploatacja"],
+      "test": [true, true, false, true]
+    },
+    {
+      "id": 20,
+      "title": "AdBlue",
+      "subject": "Emisja spalin",
+      "content": "AdBlue redukuje emisję tlenków azotu w silnikach Diesla. Uzupełniaj gdy poziom spadnie poniżej 10%.",
+      "src": "article1.jpg",
+      "question": "Kiedy uzupełniać AdBlue?",
+      "answers": ["Poniżej 10%", "Co tankowanie", "Co przegląd", "Gdy się skończy"],
+      "tags": ["adblue", "diesel", "emisja", "eksploatacja"],
+      "test": [true, false, false, false]
+    }
+  ]
 }

@@ -1,12 +1,14 @@
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom"
 import "./App.css"
-import { Navigation } from "./components/navigation"
+import { Navigation } from "./components/Navigation"
 import { Home } from "./pages/Home"
-import { Header } from "./components/header"
-import { Forum } from "./pages/forum"
-import { Search } from "./pages/search"
+import { Header } from "./components/Header"
+
+import { Search } from "./pages/Sarch"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import { Test } from "./pages/test"
+import { Test } from "./pages/Test"
+import { createTheme, ThemeProvider } from "@mui/material/styles"
+import { CategoryBarLink } from "./components/CategoryBarLink"
 
 const AppStructure = () => {
   return (
@@ -17,24 +19,31 @@ const AppStructure = () => {
     </>
   )
 }
+const theme = createTheme({
+  palette: {
+    mode: "dark"
+  }
+})
 
 function App() {
 
   const queryClient = new QueryClient()
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<AppStructure />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/forum" element={<Forum />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/test/:id" element={<Test />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </QueryClientProvider>
+    <ThemeProvider theme={theme}>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<AppStructure />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/test/:id" element={<Test />} />
+              <Route path="/category-bar-link/:category" element={<CategoryBarLink />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </QueryClientProvider>
+    </ThemeProvider>
   )
 }
 

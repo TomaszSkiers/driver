@@ -10,8 +10,8 @@ export const Advice = ({ advice }: { advice: AdviceType }) => {
   }
 
   return (
-    <Box>
-      <Typography variant="h6" sx={{ p: 3, backgroundColor: "#111" }}>
+    <Box sx={{backgroundColor: "background.default"}}>
+      <Typography variant="h6" color="text.primary" sx={{ p: 3,  backgroundColor: "background.default" }}>
         {advice.title}
       </Typography>
       <Box
@@ -24,7 +24,7 @@ export const Advice = ({ advice }: { advice: AdviceType }) => {
         alt="driver"
         src={advice.src}
       />
-      <Typography variant="body1" align="justify" sx={{ p: 2 }}>
+      <Typography variant="body1" color="text.primary" align="justify" sx={{ p: 2 }}>
         {advice.content}
       </Typography>
       <Button
@@ -33,7 +33,7 @@ export const Advice = ({ advice }: { advice: AdviceType }) => {
         sx={{ m: 2 }}
         onClick={() => loadTest(advice.id)}
       >
-        zalicz trening{" "}
+        zalicz trening
       </Button>
     </Box>
   )
